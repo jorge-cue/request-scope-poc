@@ -6,8 +6,8 @@ import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.UUID;
 
-@RequestScope
 @Component
+@RequestScope
 @Data
 public class RequestContext {
     private UUID id;
