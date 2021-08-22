@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
-/**
- *
- */
 @Component
 @RequiredArgsConstructor
 public class WebConfigurer extends WebMvcConfigurationSupport {
