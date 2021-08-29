@@ -11,4 +11,5 @@ import java.util.UUID;
 @Data
 public class RequestContext {
     private UUID id;
+    private String name;
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/greetings")
+@RequestMapping("/greetings")
 @RequiredArgsConstructor
 @Slf4j
 public class GreetingsController {
@@ -20,9 +20,9 @@ public class GreetingsController {
 
     @GetMapping("/{name}")
     public ResponseEntity<String> getGreeting(@PathVariable String name) {
-        log.debug("Request Context (23) {}", requestContext.getId());
+        log.debug("Request Context (23) {}", requestContext);
         final String greeting = greetingService.getGreeting(name);
-        log.debug("Request Context (25) {}", requestContext.getId());
+        log.debug("Request Context (25) {}", requestContext);
         return ResponseEntity.ok(greeting);
     }
 

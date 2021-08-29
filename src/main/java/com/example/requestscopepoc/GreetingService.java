@@ -14,9 +14,10 @@ public class GreetingService {
     private final RequestContext requestContext;
 
     public String getGreeting(String name) {
-        log.debug("Request Context (17) {}", requestContext.getId());
+        log.debug("Request Context (17) {}", requestContext);
         requestContext.setId(UUID.randomUUID());
-        log.debug("Request Context (19) {}", requestContext.getId());
+        requestContext.setName(name);
+        log.debug("Request Context (19) {}", requestContext);
         return String.format("Hello %s!",  name);
     }
 
